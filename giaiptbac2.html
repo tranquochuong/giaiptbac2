@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Giải phương trình bậc 2</h1>
+<table> 
+        <tr>
+            <input type="number" id="a" placeholder="nhập a">
+            <input type="number" id="b" placeholder="nhập b">
+            <input type="number" id="c" placeholder="nhập c">
+            <button onclick="giaiPtbachai()">Tính</button>
+        </tr>           
+    </table>
+    <br>
+    <p id="Result">Kết quả là:</p>
+<script>
+    function giaiPtbachai(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let c = document.getElementById("c").value;
+        let m = (b*b-4*a*c);
+        let Result;
+    if(a == 0 && b != 0 & c!=0){    
+        x = (-c/b);     
+        document.getElementById("Result").innerHTML= "Phương trình có 1 nghiệm:" + x;
+    }   
+    else if(a== 0 && b == 0 && c != 0){
+        document.getElementById("Result").innerHTML= "Phương trình vô số nghiệm:" + x;
+    }   
+    else if (a == 0 && b != 0 && c == 0){
+        document.getElementById("Result").innerHTML= "Phương trình 1 nghiệm x = 0 ";
+    }
+    else if( m > 0)
+    {   x1 =((-b) + Math.sqrt(m))/2*a;
+        x2 =(b + Math.sqrt(m))/2*a;
+    document.getElementById("Result").innerHTML= "Phương trình có 2 nghiệm:" + x1+ "  " + x2;
+    }   
+    else if( m == 0)
+    {  y = ((-b)/2*a);
+    document.getElementById("Result").innerHTML= "Phương trình có nghiệm kép:" + y;
+    } 
+    else
+    {
+     document.getElementById("Result").innerHTML= "Phương trình vô nghiệm:";
+    } 
+    }
+    
+ 
+</script>
+
+</body>
+</html>
+</body>
+</html
